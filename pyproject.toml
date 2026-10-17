@@ -1,0 +1,22 @@
+[project]
+name = "call_me_maybe"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "numpy>=2.0,<3.0",
+    "pydantic>=2.0,<3.0",
+    "llm-sdk"
+]
+
+[project.optional-dependencies]
+dev = [
+    "flake8>=7.3,<8.0",
+    "mypy>=1.0,<2.0"
+]
+
+[tool.setuptools.packages.find]
+include = ["call_me_maybe*"]
+
+[tool.uv.sources]
+llm-sdk = { path = "./llm_sdk" }
